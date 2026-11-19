@@ -1,0 +1,3 @@
+<34>1 2026-11-20T02:30:00Z firewall.corp.local sudo 14502 ID47 [auth@32473 user="secops"] user secops : TTY=pts/1 ; PWD=/home/secops ; USER=root ; COMMAND=/bin/bash
+<34>1 2026-11-20T02:30:15Z firewall.corp.local sshd 14505 ID48 - Failed password for invalid user oracle from 185.190.140.2 port 38291
+<34>1 2026-11-20T02:30:30Z firewall.corp.local sshd 14506 ID49 - Failed password for invalid user oracle from 185.190.140.2 port 38292

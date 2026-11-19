@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "title": "Test JSON Report",
+    "report_type": "INCIDENT",
+    "generated_at": "2026-11-19T21:39:52.876319",
+    "total_alerts": 1,
+    "total_events_sample": 0
+  },
+  "alerts": [
+    {
+      "alert_uuid": "alt-rep-test-01",
+      "rule_id": "RULE-001",
+      "title": "Test Incident Alert",
+      "severity": "HIGH",
+      "category": "BRUTE_FORCE",
+      "source_ip": "198.51.100.1",
+      "target_username": "root",
+      "timestamp": "2026-11-19T21:39:52.873829",
+      "confidence_score": 0.91,
+      "recommended_action": "Block IP",
+      "evidence": {
+        "failure_count": 10
+      }
+    }
+  ]
+}

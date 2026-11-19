@@ -1,0 +1,2 @@
+Alert ID,Rule ID,Title,Severity,Category,Source IP,Target User,Timestamp,Confidence,Status
+alt-rep-test-01,RULE-001,Test Incident Alert,HIGH,BRUTE_FORCE,198.51.100.1,root,2026-11-19T21:38:51.940506,0.91,NEW

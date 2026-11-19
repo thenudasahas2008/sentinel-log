@@ -1,0 +1,7 @@
+Nov 20 02:15:00 web-node-01 sshd[11200]: Failed password for jdoe from 203.0.113.88 port 51200 ssh2
+Nov 20 02:15:45 web-node-01 sshd[11201]: Failed password for asmith from 203.0.113.88 port 51201 ssh2
+Nov 20 02:16:30 web-node-01 sshd[11202]: Failed password for finance from 203.0.113.88 port 51202 ssh2
+Nov 20 02:17:15 web-node-01 sshd[11203]: Failed password for devops from 203.0.113.88 port 51203 ssh2
+Nov 20 02:18:00 web-node-01 sshd[11204]: Failed password for deploy from 203.0.113.88 port 51204 ssh2
+Nov 20 02:18:45 web-node-01 sshd[11205]: Failed password for backup from 203.0.113.88 port 51205 ssh2
+Nov 20 02:19:30 web-node-01 sshd[11206]: Accepted password for deploy from 203.0.113.88 port 51206 ssh2

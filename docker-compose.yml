@@ -1,0 +1,40 @@
+services:
+  sentinel-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinel-log
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - SECRET_KEY=sentinel_prod_secret_replace_with_strong_key_in_env
+      - DATABASE_URL=postgresql://sentinel_user:sentinel_secure_pass@postgres:5432/sentinel_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - sentinel_uploads:/app/backend/uploads
+      - sentinel_reports:/app/backend/reports_storage
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: sentinel-postgres
+    environment:
+      POSTGRES_USER: sentinel_user
+      POSTGRES_PASSWORD: sentinel_secure_pass
+      POSTGRES_DB: sentinel_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel_user -d sentinel_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  sentinel_uploads:
+  sentinel_reports:
